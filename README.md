@@ -16,7 +16,7 @@ python3 train.py --config train.yaml
 ```
 python3 test.py --config train.yaml --batch_size 40000 --img_path 438.png --upscale_factor 4.5 --model_path save/train/epoch-last.pth
 ```
-
+Please change the arguments mentioned above as per requirement. We have given an example for quick replication.
 Considering reducing the batch size if you run out of GPU memory.
 
 
