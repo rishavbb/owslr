@@ -11,19 +11,6 @@ import yaml
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 
-def send_batch(hr_training_coordinates, batch_size=128):
-    x = []
-    temp_batch_size = 0
-    for each_hr_coord in hr_training_coordinates:
-        x.append(each_hr_coord)
-
-        temp_batch_size+=1
-        print("PPP", x)
-
-    return torch.tensor(np.stack(x)) 
-
-
-
 def semiLocal_xy(img_length):
     return  torch.meshgrid(torch.linspace(start=-img_length//2, end=img_length//2, steps=img_length),
                            torch.linspace(start=-img_length//2, end=img_length//2, steps=img_length),

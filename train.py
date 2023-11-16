@@ -111,8 +111,10 @@ def train():
     args = parser.parse_args()
     save_name = args.name
     if save_name is None:
-        save_name = '_' + args.config.split('/')[-1][:-len('.yaml')]
+        save_name = args.config.split('/')[-1][:-len('.yaml')]
     save_path = os.path.join('./save', save_name)
+
+    os.makedirs(save_path, exist_ok=True)
 
     with open(args.config, 'r') as f:
         config = yaml.load(f, Loader=yaml.FullLoader)

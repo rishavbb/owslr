@@ -18,7 +18,7 @@ val_dataset:
   dataset:
     name: image-folder
     args:
-      root_path: ./del
+      root_path: ./val
       first_k: 10
       repeat: 160
       cache: in_memory
