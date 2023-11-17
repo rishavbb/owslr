@@ -6,6 +6,7 @@ This is the official implementation for [OW-SLR: Overlapping Windows on Semi-Loc
 ![image](assets/image.png)
 
 ### Training
+Images to be trained are put in the "data" folder and validation images in the "val" folder.
 
 ```
 python3 train.py --config train.yaml
